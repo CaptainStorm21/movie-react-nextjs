@@ -15,7 +15,7 @@ const Sidebar = (props) => {
 
         <div className="col-lg-3 ">
 
-            <h1 className="my-4">Movie Shop</h1>
+            <h1 className="my-4">{props.appName }</h1>
             <div className="list-group">
                 <a href="#" className="list-group-item">Category 1</a>
                 <a href="#" className="list-group-item">Category 2</a>
@@ -24,6 +24,10 @@ const Sidebar = (props) => {
             <div className="p-2">
                 {/* <button className="btn btn-primary mx-2" onClick={increment}> Add </button>
                 <button className="btn btn-warning" onClick={decrement}> Remove </button>*/}
+                <button
+                    className="btn btn-primary mx-2"
+                    onClick={props.clickHandler}
+                > Click! </button>
                 <h1>  {props.count}  </h1>
             </div>
         </div>

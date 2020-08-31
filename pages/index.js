@@ -32,15 +32,20 @@ const Home = () => {
             <div className="container-fluid home-page">
 
                 <div className="row mt-4">
-                    <Sidebar count={count} />
+                    <Sidebar count={count}
+                        appName="Movie Archive"
+                        clickHandler={() => { alert ("prop click") }}   
+                    />
                     <div className="col-lg-9">
                         <Carausel />
                         <div className="row">
-                            <MovieList />
+                            <MovieList count={count}/>
                         </div>
                     </div>
-                    <button className="btn btn-primary mx-2" onClick={increment}> Add </button>
-                    <button className="btn btn-warning" onClick={decrement}> Remove </button>
+                    <button className="btn btn-primary mx-2"
+                            onClick={increment}> Add </button>
+                    <button className="btn btn-warning"
+                            onClick={decrement}> Remove </button>
                 </div>
             </div>
             <Footer />

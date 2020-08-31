@@ -42,7 +42,7 @@ class MovieList extends Component {
     }
 
     render() {
-        //debugger
+        //debugg
         return (
             <>
                 <div className="col-lg-4 col-md-6 mb-4">
@@ -59,7 +59,7 @@ class MovieList extends Component {
                             <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         </div>
                         <div className="p-2">
-                            //<button className="btn btn-primary mx-2" onClick={() => this.increment()}> Add </button>
+                            {/*<button className="btn btn-primary mx-2" onClick={() => this.increment()}> Add </button>*/}
                             <button className="btn btn-primary mx-2" onClick={this.increment}> Add </button>
                             <button className="btn btn-warning" onClick={this.decrement}> Remove </button>
                         </div>

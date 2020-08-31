@@ -1,10 +1,10 @@
-import React from 'react'
-import Head from 'next/head'
-import Navbar from '../components/navbar';
-import Sidebar from '../components/sidebar';
+import Head from 'next/head';
+import React from 'react';
 import Carausel from '../components/carausel';
 import Footer from '../components/Footer';
 import MovieList from '../components/movie-list';
+import Navbar from '../components/navbar';
+import Sidebar from '../components/sidebar';
 
 const Home = () => (
     <div>
@@ -17,10 +17,9 @@ const Home = () => (
         </Head>
         <Navbar />
 
-        <div className="container">
+        <div className="container-fluid home-page">
             <div className="row mt-4">
                 <Sidebar />
-
                 <div className="col-lg-9">
                     <Carausel />
                     <div className="row">
@@ -31,7 +30,15 @@ const Home = () => (
             </div>
         </div>
         <Footer />
-    </div>
+
+        <style jsx>
+            {`
+          .home-page {
+               background-color: #fafafa;
+                margin-top: 30px;
+        `}
+        </style>
+    </div >
 )
 
-export default Home
+export default Home;

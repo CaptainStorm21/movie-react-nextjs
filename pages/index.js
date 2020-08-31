@@ -9,12 +9,10 @@ import Sidebar from '../components/sidebar';
 const Home = () => {
     const [count, whateverIwant] = useState(0);
     const increment = () => {
-        // setCount(count + 1)
         whateverIwant(count + 1)
     }
 
     const decrement = () => {
-        // setCount(count - 1)
         whateverIwant(count - 1)
     }
 
@@ -34,7 +32,7 @@ const Home = () => {
                 <div className="row mt-4">
                     <Sidebar count={count}
                         appName="Movie Archive"
-                        clickHandler={() => { alert ("prop click") }}   
+                        clickHandler={() => { alert ("prop click") }}
                     />
                     <div className="col-lg-9">
                         <Carausel />

@@ -32,16 +32,16 @@ const Home = () => {
             <div className="container-fluid home-page">
 
                 <div className="row mt-4">
-                    <Sidebar count={ count } />
+                    <Sidebar count={count} />
                     <div className="col-lg-9">
-                            <Carausel />
+                        <Carausel />
                         <div className="row">
                             <MovieList />
                         </div>
-
+                    </div>
                     <button className="btn btn-primary mx-2" onClick={increment}> Add </button>
                     <button className="btn btn-warning" onClick={decrement}> Remove </button>
-                </div></div>
+                </div>
             </div>
             <Footer />
 

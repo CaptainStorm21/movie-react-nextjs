@@ -4,7 +4,7 @@ import Navbar from '../components/navbar';
 import Sidebar from '../components/sidebar';
 import Carausel from '../components/carausel';
 import Footer from '../components/Footer';
-import Card from '../components/Card';
+import MovieList from '../components/movie-list';
 
 const Home = () => (
     <div>
@@ -24,7 +24,7 @@ const Home = () => (
                 <div className="col-lg-9">
                     <Carausel />
                     <div className="row">
-                        <Card />
+                        <MovieList />
 
                     </div>
                 </div>

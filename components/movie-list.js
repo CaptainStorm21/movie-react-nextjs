@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = () => {
+const MovieList = () => {
     return (
         <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
@@ -20,4 +20,4 @@ const Card = () => {
     );
 }
 
-export default Card;
+export default MovieList;

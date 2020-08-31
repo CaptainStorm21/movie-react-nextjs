@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class MovieList extends Component {
-
     //state = {
     //    count: 0,
 
@@ -12,13 +11,21 @@ class MovieList extends Component {
         this.state = {
             count: 0
         }
+
+        //without an arrow function
+        this.increment = this.increment.bind(this)
     }
 
+    //without an arrow function
+    //increment() {
+    //    const { count } = this.state
+    //    this.setState({
+    //        count: count + 1
+    //    })
+    //}
+
     increment = () => {
-        //alert("Add ")
-        //const count = this.state.count;
         const { count } = this.state;
-        //debugger
         this.setState({
             count: count + 1
         })
@@ -52,6 +59,7 @@ class MovieList extends Component {
                             <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         </div>
                         <div className="p-2">
+                            //<button className="btn btn-primary mx-2" onClick={() => this.increment()}> Add </button>
                             <button className="btn btn-primary mx-2" onClick={this.increment}> Add </button>
                             <button className="btn btn-warning" onClick={this.decrement}> Remove </button>
                         </div>
@@ -62,4 +70,4 @@ class MovieList extends Component {
         );
     }
 }
-    export default MovieList;
+export default MovieList;

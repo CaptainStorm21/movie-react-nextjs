@@ -15,14 +15,27 @@ class MovieList extends Component {
     }
 
     increment = () => {
-        alert("Add ")
+        //alert("Add ")
+        //const count = this.state.count;
+        const { count } = this.state;
+        //debugger
+        this.setState({
+            count: count + 1
+        })
     }
 
     decrement = () => {
-        alert("Remove ")
+        //alert("Remove ")
+        const { count } = this.state;
+        //very bad
+        //this.state.count = count - 1;
+        this.setState({
+            count: count - 1
+        })
     }
 
     render() {
+        //debugger
         return (
             <>
                 <div className="col-lg-4 col-md-6 mb-4">

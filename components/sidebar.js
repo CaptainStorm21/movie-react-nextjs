@@ -13,11 +13,11 @@ const Sidebar = (props) => {
             </div>
             <div className="p-2">
 
-                <button
+                {/* <button
                     className="btn btn-primary mx-2"
                     onClick={props.clickHandler}
                 > Click! </button>
-                <h1>  {props.count}  </h1>
+                <h1>  {props.count}  </h1>*/}
             </div>
         </div>
 

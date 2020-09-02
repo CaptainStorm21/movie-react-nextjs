@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 const Sidebar = (props) => {
     return (
@@ -10,14 +11,6 @@ const Sidebar = (props) => {
                 <a href="#" className="list-group-item">Category 1</a>
                 <a href="#" className="list-group-item">Category 2</a>
                 <a href="#" className="list-group-item">Category 3</a>
-            </div>
-            <div className="p-2">
-
-                {/* <button
-                    className="btn btn-primary mx-2"
-                    onClick={props.clickHandler}
-                > Click! </button>
-                <h1>  {props.count}  </h1>*/}
             </div>
         </div>
 

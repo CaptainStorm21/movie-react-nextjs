@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\components",
     "\\pages",
-    "\\public",
-    "\\styles"
+    "\\resources"
   ],
-  "SelectedNode": "\\pages\\about.js",
+  "SelectedNode": "\\components\\movie-list.js",
   "PreviewInSolutionExplorer": false
 }

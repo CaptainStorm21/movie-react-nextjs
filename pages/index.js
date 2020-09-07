@@ -20,7 +20,7 @@ const Home = () => {
     //const movies = getMovies() || []
     debugger
     getMovies().then((movies) => {
-        debugger
+        //debugger
         setMovies(movies)
     })
     debugger

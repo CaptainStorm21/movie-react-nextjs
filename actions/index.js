@@ -35,6 +35,21 @@ const MOVIE_DATA =
 
 
 export const getMovies = () => {
-    //asynch function 
-    return MOVIE_DATA;
+    debugger
+    //promise function
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            debugger
+            resolve(MOVIE_DATA)
+        }, 100)
+    })
+
+    //asynch function
+    //debugger
+    //setTimeout(() => {
+    //    debugger
+    //    return MOVIE_DATA;
+
+    //}, 2000)
+
 }

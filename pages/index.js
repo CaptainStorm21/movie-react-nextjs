@@ -11,8 +11,20 @@ import { getMovies } from '../actions';
 
 
 const Home = () => {
-    //imporve this because now it is called everytime
-    const movies = getMovies();
+
+    const [movies, setMovies] = useState([])
+
+    //debugger
+    //imporve this because now it is called
+    //empty array if nothing is found
+    //const movies = getMovies() || []
+    debugger
+    getMovies().then((movies) => {
+        debugger
+        setMovies(movies)
+    })
+    debugger
+
     return (
         <div>
             <Head>

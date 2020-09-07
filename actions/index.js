@@ -35,5 +35,6 @@ const MOVIE_DATA =
 
 
 export const getMovies = () => {
+    //asynch function 
     return MOVIE_DATA;
 }

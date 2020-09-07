@@ -11,7 +11,7 @@ import { getMovies } from '../actions';
 
 
 const Home = () => {
-
+    //imporve this because now it is called everytime
     const movies = getMovies();
     return (
         <div>

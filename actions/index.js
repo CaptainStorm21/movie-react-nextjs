@@ -40,7 +40,8 @@ export const getMovies = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             //debugger
-            resolve(MOVIE_DATA)
+            //resolve(MOVIE_DATA)
+            reject('Cannot fetch data')
         }, 100)
     })
 

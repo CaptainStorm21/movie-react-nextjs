@@ -15,7 +15,8 @@ class Home extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            movies: []
+            movies: [],
+            errorMessage: 'Error Message'
         }
     }
 
@@ -23,6 +24,10 @@ class Home extends React.Component {
         getMovies().then((movies) => {
             this.setState({ movies })
         })
+            .catch((error) => {
+                //alert("erro")
+                this.setState({ errorMessage: error })
+            })
     }
     /*    state = {
             movies: []
@@ -43,7 +48,7 @@ class Home extends React.Component {
     //});
 
     render() {
-        const { movies } = this.state
+        const { movies, errorMessage } = this.state
         return (
             <div>
                 <Head>
@@ -64,9 +69,13 @@ class Home extends React.Component {
                         <div className="col-lg-9">
                             <Carausel />
                             <div className="row">
-                                <MovieList
-                                    movies={movies}
-                                />
+                                {errorMessage && <div className="alert alert-primary p-1 mb-2" role="alert">
+                                    <h5 className="text-primary"> {errorMessage}</h5>
+                                </div>
+                                }
+                                    <MovieList
+                                        movies={movies}
+                                    />
                             </div>
                         </div>
                     </div>

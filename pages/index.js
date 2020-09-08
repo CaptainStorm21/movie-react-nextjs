@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carausel from '../components/carausel';
 import Footer from '../components/Footer';
 import MovieList from '../components/movie-list';
@@ -9,21 +9,34 @@ import Sidebar from '../components/sidebar';
 //importing MOVIE DATA function
 import { getMovies } from '../actions';
 
-
 const Home = () => {
 
-    const [movies, setMovies] = useState([])
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const resMovies = await getMovies()
+            setMovies(resMovies)
+        }
+    fetchData();
+    })
+
 
     //debugger
     //imporve this because now it is called
     //empty array if nothing is found
     //const movies = getMovies() || []
-    debugger
-    getMovies().then((movies) => {
-        //debugger
-        setMovies(movies)
-    })
-    debugger
+    //debugger
+
+    ////useEffect
+    //useEffect(() => {
+    //    getMovies().then((movies) => {
+    //        //debugger
+    //        setMovies(movies)
+    //    })
+    //}, [])
+
+    //debugger
 
     return (
         <div>
